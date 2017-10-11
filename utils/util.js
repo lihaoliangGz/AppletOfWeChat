@@ -17,3 +17,9 @@ const formatNumber = n => {
 module.exports = {
   formatTime: formatTime
 }
+
+function sayHello(name){
+  console.log(`Hello ${name} !`)
+}
+
+module.exports.sayHello=sayHello

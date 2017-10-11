@@ -1,5 +1,7 @@
 //app.js
 App({
+
+  //生命周期函数--监听小程序初始化（全局只触发一次）
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -33,6 +35,25 @@ App({
       }
     })
   },
+
+  //生命周期函数--监听小程序显示,当小程序启动，或从后台进入前台显示
+  onShow:function(options){
+    //Do something when show
+    console.log('onShow方法执行\n\n'+options.scene);
+  },
+
+  //生命周期函数--监听小程序隐藏,当小程序从前台进入后台
+  onHide:function(options){
+    //Do something when hide
+    console.log("onHide方法执行\n\n"+options)
+
+  },
+
+  //错误监听函数
+  onError:function(msg){
+    console.log(msg)
+  },
+
   globalData: {
     userInfo: null
   }

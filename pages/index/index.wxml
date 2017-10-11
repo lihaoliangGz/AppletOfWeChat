@@ -7,7 +7,83 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+
+  <checkbox color='#666666' >选项1</checkbox>
+  <checkbox checked='true'>选项2</checkbox>
+
+  <picker mode="time">当前时间:12:00</picker>
+
+  <radio-group>
+    <radio></radio>
+    <radio></radio>
+  </radio-group>
+    
+  <slider style='width:350px' min='50' max='200' show-value/>
+  
+  <view class="section section_gap">
+    <text class="section__title">设置最小/最大值</text>
+    <view class="body-view">
+      <slider min="50" max="200" show-value/>
+    </view>
+  </view>
+
+  <switch checked></switch>
+
+  <navigator url='https://www.baidu.com'>跳转到新页面</navigator>
+
+  <map  longitude="113.324520" latitude="23.099994" ></map>
+
+  <canvas style='width:300px;height:200px'></canvas>
+
+  <open-data type="groupName" open-gid="xxxxxx"></open-data>
+
+  <contact-button type='default-dark'></contact-button>
+
+  <button bindtap='requestTest'>wx.request测试</button>
+
+  <button bindtap='systemTest'>设备API</button>
+
+  <button bindtap='mediaTest'>媒体API</button>
+
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>Hello {{name}}! </view>
+  <button bindtap='changeName'>Click me</button>
+  <button bindtap='SayHello'>SayHello</button>
+
+
+  <view wx:if="{{length > 5}}"> 1 </view>
+  <view wx:elif="{{length > 2}}"> 2 </view>
+  <view wx:else> 3 </view>
+
+  <button bindtap='tapTest' id='tapTest' data-hi='Hello World'>Click me</button>
+
+  <wxs module="foo">
+    var some_msg = "hello world";
+    module.exports = {
+        msg : some_msg,
+     }
+  </wxs>
+  <view> {{foo.msg}} </view>
+
+  <icon type='success_no_circle' size='50'> 
+  </icon>
+
+  <text selectable='false'>
+    文本text
+  </text>
+
+  <rich-text>
+    富文本
+  </rich-text>
+
+  <progress percent='20' active=''/>
+
+  <button size='mini' type='primary' form-type='submit'>长空</button>
+
+
+  
+
 </view>
